@@ -1,5 +1,5 @@
 import React from 'react';
-import BuscaCep from './components/BuscaCep.tsx';
+import BuscaCep from './components/BuscaCep';
 
 const App: React.FC = () => {
   return (
