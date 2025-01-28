@@ -1,0 +1,12 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: blue;
+}
+
+.test {
+    font-size: 20px;
+    color: green;
+}
