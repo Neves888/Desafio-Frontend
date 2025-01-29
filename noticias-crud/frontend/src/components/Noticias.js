@@ -107,8 +107,10 @@ const Noticias = () => {
                             <li key={noticia.id}>
                                 <h2>{noticia.titulo}</h2>
                                 <p>{noticia.descricao}</p>
-                                <button onClick={() => handleEditNoticia(noticia)}>Editar</button>
-                                <button onClick={() => handleDeleteNoticia(noticia.id)}>Deletar</button>
+                                <div className="buttons">
+                                    <button onClick={() => handleEditNoticia(noticia)}>Editar</button>
+                                    <button onClick={() => handleDeleteNoticia(noticia.id)}>Deletar</button>
+                                </div>
                             </li>
                         ))
                 ) : (
