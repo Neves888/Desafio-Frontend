@@ -7,8 +7,18 @@ services:
       - "3000:3000"
     depends_on:
       - back-end
+    environment:
+      - REACT_APP_API_URL=http://back-end:5000
+    networks:
+      - app-network
   back-end:
     build:
       context: ./backend
     ports:
       - "5000:5000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

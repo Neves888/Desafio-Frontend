@@ -6,8 +6,10 @@ COPY package.json package-lock.json ./
 
 RUN npm install
 
+RUN npm install -g json-server
+
 COPY . ./
 
 EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
