@@ -12,23 +12,23 @@ O projeto é dividido em duas pastas principais:
 
 ```
 teste-frontend-busca-cep/
-├── public/                  # Arquivos estáticos (HTML, imagens, etc.)
-├── src/                     # Código-fonte da aplicação
-│   ├── components/          # Componentes React
-│   │   ├── buscaCep.css     # Estilos do componente BuscaCEP
-│   │   ├── buscaCep.tsx     # Componente principal de busca de CEP
-│   │   └── buscaCep.test.tsx# Testes do componente BuscaCEP
-│   ├── App.css              # Estilos globais da aplicação
-│   ├── App.tsx              # Componente principal da aplicação
-│   ├── index.css            # Estilos gerais
-│   ├── index.tsx            # Ponto de entrada da aplicação
-│   ├── reportWebVitals.ts   # Relatório de desempenho
-│   └── setupTests.ts        # Configuração dos testes
-├── .gitignore               # Arquivos ignorados pelo Git
-├── Dockerfile               # Configuração do Docker para o front-end
-├── jest.config.js           # Configuração do Jest para testes
-├── package.json             # Dependências e scripts do projeto
-└── tsconfig.json            # Configuração do TypeScript
+├── public/                         # Arquivos estáticos (HTML, imagens, etc.)
+├── src/                            # Código-fonte da aplicação
+│   ├── components/                 # Componentes React
+│   │   ├── buscaCep.css            # Estilos do componente BuscaCEP
+│   │   ├── buscaCep.tsx            # Componente principal de busca de CEP
+│   │   └── buscaCep.test.tsx       # Testes do componente BuscaCEP
+│   ├── App.css                     # Estilos globais da aplicação
+│   ├── App.tsx                     # Componente principal da aplicação
+│   ├── index.css                   # Estilos gerais
+│   ├── index.tsx                   # Ponto de entrada da aplicação
+│   ├── reportWebVitals.ts          # Relatório de desempenho
+│   └── setupTests.ts               # Configuração dos testes
+├── .gitignore                      # Arquivos ignorados pelo Git
+├── Dockerfile                      # Configuração do Docker para o front-end
+├── jest.config.js                  # Configuração do Jest para testes
+├── package.json                    # Dependências e scripts do projeto
+└── tsconfig.json                   # Configuração do TypeScript
 ```
 **Justificativa:**
 
@@ -53,29 +53,29 @@ teste-frontend-busca-cep/
 
 ```
 noticias-crud/
-├── frontend/                # Aplicação front-end
-│   ├── public/              # Arquivos estáticos
-│   ├── src/                 # Código-fonte do front-end
-│   │   ├── components/      # Componentes React
-│   │   │   └── Noticias.js  # Componente de listagem/manipulação de notícias
-│   │   ├── services/        # Serviços de API
-│   │   │   └── api.js       # Configuração das chamadas à API
-│   │   ├── App.js           # Componente principal do front-end
-│   │   ├── index.css        # Estilos globais
-│   │   ├── index.js         # Ponto de entrada do front-end
-│   │   └── reportWebVitals.js# Relatório de desempenho
-│   ├── .gitignore           # Arquivos ignorados pelo Git
-│   ├── Dockerfile           # Configuração do Docker para o front-end
-│   └── package.json         # Dependências e scripts do front-end
-├── backend/                 # Aplicação back-end
-│   ├── public/              # Arquivos estáticos (se necessário)
-│   ├── style/               # Estilos (se necessário)
-│   ├── .gitignore           # Arquivos ignorados pelo Git
-│   ├── db.json              # Banco de dados simulado (JSON)
-│   ├── Dockerfile           # Configuração do Docker para o back-end
-│   ├── package.json         # Dependências e scripts do back-end
-│   └── server.js            # Ponto de entrada do back-end
-└── docker-compose.yml       # Configuração do Docker Compose para rodar front-end e back-end juntos
+├── frontend/                       # Aplicação front-end
+│   ├── public/                     # Arquivos estáticos
+│   ├── src/                        # Código-fonte do front-end
+│   │   ├── components/             # Componentes React
+│   │   │   └── Noticias.js         # Componente de listagem/manipulação de notícias
+│   │   ├── services/               # Serviços de API
+│   │   │   └── api.js              # Configuração das chamadas à API
+│   │   ├── App.js                  # Componente principal do front-end
+│   │   ├── index.css               # Estilos globais
+│   │   ├── index.js                # Ponto de entrada do front-end
+│   │   └── reportWebVitals.js      # Relatório de desempenho
+│   ├── .gitignore                  # Arquivos ignorados pelo Git
+│   ├── Dockerfile                  # Configuração do Docker para o front-end
+│   └── package.json                # Dependências e scripts do front-end
+├── backend/                        # Aplicação back-end
+│   ├── public/                     # Arquivos estáticos (se necessário)
+│   ├── style/                      # Estilos (se necessário)
+│   ├── .gitignore                  # Arquivos ignorados pelo Git
+│   ├── db.json                     # Banco de dados simulado (JSON)
+│   ├── Dockerfile                  # Configuração do Docker para o back-end
+│   ├── package.json                # Dependências e scripts do back-end
+│   └── server.js                   # Ponto de entrada do back-end
+└── docker-compose.yml              # Configuração do Docker Compose para rodar front-end e back-end juntos
 ```
 **Justificativa:**
 
@@ -118,22 +118,23 @@ cd /caminho/para/teste-frontend-busca-cep
 **4. Instale as dependências do projeto com o comando**
 ```npm install```;
 
-## Executando a Aplicação Noticias
+**5. Rode o projeto sem Docker usando o comando**
+```npm start```;
 
-**Rodando o projeto sem o Docker**
+- Obs: No projeto de Notícias o npm start deverá ser primeiro no back-end para depois ser executado no front-end.
 
-    1º. Suba o back-end com o comando: npm start;
-    2º. Vá até a pasta front-end e no arquivo api.js substitua o endereço da url por localhost:5000;
-    3º. Suba o front-end também utilizando o comando npm start.
-*Obs: verifique que você está dentro das respectivas pastas, o caminho deve ser algo como:
+## Executando a Aplicação com Docker
 
-```bash
-cd /caminho/para/noticias-crud/backend
-``` 
+### Requisitos
+Certifique-se de ter os seguintes itens instalados na sua máquina:
 
-**Rodando o projeto em Docker**
+- **Docker** (https://docs.docker.com/get-docker/)
+- **Docker Compose** (opcional, dependendo da necessidade de compor múltiplos serviços)
 
-    No terminal geral do projeto após instalar as depências digite o comando:
+---
+### Rodando o projeto Notícias
+  
+  No terminal geral do projeto após instalar as depências digite o comando:
 
  ```docker-compose up --build```;
 
@@ -141,29 +142,9 @@ cd /caminho/para/noticias-crud/backend
 
 *- Parar os containers basta usar o comando**```docker-compose down```. 
 
-**- Parar rodar os testes use o comando** ```npm run test```. 
-
-## Executando a Aplicação Busca de CEP
-
-### Rodando o projeto sem o Docker ###
-
-    Após instalar as dependências use o comando: npm start
-
-### Rodando o projeto com o Docker ###
-
-Este guia explica como configurar e rodar a aplicação **teste-frontend-busca-cep** usando o Docker.
-
----
-
-## Requisitos
-Certifique-se de ter os seguintes itens instalados na sua máquina:
-
-- **Docker** (https://docs.docker.com/get-docker/)
-- **Docker Compose** (opcional, dependendo da necessidade de compor múltiplos serviços)
-
----
-
-## Passos para Configurar e Rodar a Aplicação
+*- Parar rodar os testes use o comando** ```npm run test```. 
+___
+### Rodando o projeto Buscar CEP
 
 ### 1. Navegue até o Diretório do Projeto
 Abra o terminal e vá até o diretório onde está o arquivo `Dockerfile`.
