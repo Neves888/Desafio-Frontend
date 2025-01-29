@@ -1,0 +1,105 @@
+body {
+    background-color: #dbdbe0;
+    color: #333;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pesquisa-cep {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 14px 16px rgba(7, 6, 107, 0.1);
+    text-align: center;
+}
+
+.cep-titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #120427;
+    font-weight: bold;
+}
+
+.busca {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #051629;
+    box-shadow: 0 0 5px rgba(29, 31, 32, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0f4074;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:disabled {
+    background-color: #753939;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0643eb;
+    transform: translateY(-2px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.erro {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.endereco {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.endereco h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.endereco p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.endereco p strong {
+    font-weight: bold;
+    color: #051527;
+}
